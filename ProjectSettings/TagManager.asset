@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - BlueSpawnMid
+  - RedSpawnMid
+  - RedBase
+  - BlueBase
+  - Ground
+  - RedTeam
+  - BlueTeam
+  - GreenBase
+  - YellowBase
+  - MidWaypointRed
+  - MidWaypointBlue
+  - MidWaypointYellow
+  - MidWaypointGreen
+  - YellowSpawnMid
+  - GreenSpawnMid
+  - GreenTeam
+  - YellowTeam
+  - GreenToRedToGreenWaypoint
+  - GreenToBlueToGreenWaypoint
+  - YellowToRedToYellowWaypoint
+  - YellowToBlueToYellowWaypoint
+  - RedToGreen
+  - RedToYellow
+  - BlueToGreen
+  - BlueToYellow
+  - YellowToRed
+  - YellowToBlue
+  - GreenToRed
+  - GreenToBlue
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
