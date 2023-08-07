@@ -2557,6 +2557,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f57c4bab4c3cf4e8563844a7c95fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  champions:
+  - {fileID: 11400000, guid: fc83f852604c1d24a9c0fd2e7cdb6058, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 81c713df1f86b5f49a0369a5cd64834d, type: 2}
+  infusions:
+  - {fileID: 11400000, guid: acf5bacd67b6b524493179a0cc78e1e6, type: 2}
+  items:
+  - {fileID: 11400000, guid: b5f5caf88a2b4b04ba49641bb44ae5fe, type: 2}
+  minions:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  towers:
+  - {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  - {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  - {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  - {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
   effectsList: []
   itemsList: []
   infusionsList: []
@@ -2604,6 +2621,7 @@ MonoBehaviour:
   yellowSpawnMid: {fileID: 0}
   yellowToBlue: {fileID: 0}
   spawnTimer: 40
+  spawning: 0
   greenToRedToGreenWaypoint: {fileID: 0}
   greenToBlueToGreenWaypoint: {fileID: 0}
   yellowToRedToYellowWaypoint: {fileID: 0}

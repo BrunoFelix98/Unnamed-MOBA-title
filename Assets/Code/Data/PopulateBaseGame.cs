@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class PopulateBaseGame : MonoBehaviour
 {
-    public enum DamageTypes
-    {
-        PHYSICAL,
-        MAGICAL,
-        TRUE
-    }
+    //champions
+    public ChampionsScriptable[] champions;
+
+    //abilities
+    public AbilitiesScriptable[] abilities;
+
+    //infusions
+    public InfusionsScriptable[] infusions;
+
+    //items
+    public ItemsScriptable[] items;
+
+    //minions
+    public MinionScriptable[] minions;
+
+    //towers
+    public TowerScriptable[] towers;
 
     public List<Effect> effectsList = new List<Effect>();
     public List<Item> itemsList = new List<Item>();
@@ -26,26 +37,6 @@ public class PopulateBaseGame : MonoBehaviour
     public static class EffectNames
     {
         public static readonly string BETTERLIFESTEAL = "Better Lifesteal";
-    }
-
-    public static class ItemNames
-    {
-        public static readonly string BLOODTHIRSTER = "Bloodthirster";
-    }
-
-    public static class InfusionNames
-    {
-        public static readonly string LIFESTEAL = "Lifesteal";
-    }
-
-    public static class AbilityNames
-    {
-        public static readonly string ENRAGED = "Enraged";
-    }
-
-    public static class ChampionNames
-    {
-        public static readonly string OLAF = "Olaf";
     }
 
     void Awake()
@@ -65,8 +56,7 @@ public class PopulateBaseGame : MonoBehaviour
 
     public void PopulateAllItems()
     {
-        //                     ID name                     cd hasActive?   effects
-        CreateNewItem(new Item(0, ItemNames.BLOODTHIRSTER, 0, false,       new[] {effectsList[0]}));
+        CreateNewItem(new Item(0, items[0].itemName, items[0].itemcooldown, items[0].itemhasActive, items[0].itemEffects));
     }
 
     public void PopulateAllEffects()
@@ -77,37 +67,32 @@ public class PopulateBaseGame : MonoBehaviour
 
     public void PopulateAllInfusions()
     {
-        //                              ID name                     cd effects
-        CreateNewInfusion(new Infusions(0, InfusionNames.LIFESTEAL, 0, new[] { effectsList[0] }));
+        CreateNewInfusion(new Infusions(0, infusions[0].infusionName, infusions[0].infusioncooldown, infusions[0].infusionEffects));
     }
 
     public void PopulateAllAbilities()
     {
-        //                           ID cd name                  passive?   effects                   lvl
-        CreateNewAbility(new Ability(0, 5, AbilityNames.ENRAGED, true,      new[] { effectsList[0] }, 0));
+        CreateNewAbility(new Ability(0, abilities[0].abilityCooldown, abilities[0].abilityName, abilities[0].abilityIsPassive, abilities[0].abilityEffects, abilities[0].abilityLevel));
     }
 
     public void PopulateAllChampions()
     {
-        //                             ID type                ranged?   maxhealth   maxmana     movspd      abilities                   Presist     Mresist     Pdmg    Mdmg    PresistIgnore   MresistIgnore   cdr     Hregen      Mregen      critchange%     critdmg%    lifesteal%      tenacity%   Arange
-        CreateNewChampion(new Champion(0, ChampionNames.OLAF, false,    500.0,      300.0,      3.5,        new[] { abilitiesList[0] }, 20.0,       15.0,       50.0,   0.0,    0.0,            0.0,            0.0,    3.0,        1.5,        0,              200.0,      10,             0,          1.0));
+        CreateNewChampion(new Champion(0, champions[0].championName, champions[0].championIsRanged, champions[0].championMaxHitPoints, champions[0].championMaxManaPoints, champions[0].championMovementSpeed, champions[0].championAbilities, champions[0].championPhysicalResistance, champions[0].championMagicalResistance, champions[0].championPhysicalDamage, champions[0].championMagicalDamage, champions[0].championPhysicalResistanceIgnore, champions[0].championMagicalResistanceIgnore, champions[0].championCooldownReduction, champions[0].championHealthRegeneration, champions[0].championManaRegeneration, champions[0].championCriticalStrikeChance, champions[0].championCriticalStrikeDamage, champions[0].championLifestealPercent, champions[0].championDisableReductionPercent, champions[0].championAttackRange));
     }
 
     public void PopulateAllMinions()
     {
-        //                         ID type                               maxhealth  Presist     Mresist     Pdmg    Mdmg    Movspd  Arange      Aspd       vrange  currenthealth
-        CreateNewMinion(new Minion(0, MinionSpawning.MinionType.WARRIOR, 200.0,     5.0,        5.0,        20.0,   0.0,    3.5,    1.0,        1f,        12.0,   200.0));
-        CreateNewMinion(new Minion(1, MinionSpawning.MinionType.MAGE,    150.0,     0.0,        0.0,        0.0,    30.0,   3.5,    7.0,       1.5f,       12.0,   150.0));
-        CreateNewMinion(new Minion(2, MinionSpawning.MinionType.SIEGE,   500.0,     15.0,       15.0,       50.0,   0.0,    3.5,    7.0,       1.75f,      12.0,   500.0));
+        CreateNewMinion(new Minion(0, minions[0].minionType, minions[0].minionHitpoints, minions[0].minionCurrentHitpoints, minions[0].minionPhysicalResistance, minions[0].minionMagicalResistance, minions[0].minionAttackDamage, minions[0].minionMagicalDamage, minions[0].minionMovementSpeed, minions[0].minionAttackRange, minions[0].minionAttackSpeed, minions[0].minionVisionRange));
+        CreateNewMinion(new Minion(1, minions[1].minionType, minions[1].minionHitpoints, minions[1].minionCurrentHitpoints, minions[1].minionPhysicalResistance, minions[1].minionMagicalResistance, minions[1].minionAttackDamage, minions[1].minionMagicalDamage, minions[1].minionMovementSpeed, minions[1].minionAttackRange, minions[1].minionAttackSpeed, minions[1].minionVisionRange));
+        CreateNewMinion(new Minion(2, minions[2].minionType, minions[2].minionHitpoints, minions[2].minionCurrentHitpoints, minions[2].minionPhysicalResistance, minions[2].minionMagicalResistance, minions[2].minionAttackDamage, minions[2].minionMagicalDamage, minions[2].minionMovementSpeed, minions[2].minionAttackRange, minions[2].minionAttackSpeed, minions[2].minionVisionRange));
     }
 
     public void PopulateAllTowers()
     {
-        //                       ID hitpoints   Admg   Aspd  Arange
-        CreateNewTower(new Tower(0, 5000.0,     150.0, 1.5f, 11.0f));
-        CreateNewTower(new Tower(1, 5000.0,     200.0, 1.5f, 10.0f));
-        CreateNewTower(new Tower(2, 5000.0,     400.0, 1.5f, 9.0f));
-        CreateNewTower(new Tower(3, 5000.0,     500.0, 1.5f, 7.5f));
+        CreateNewTower(new Tower(0, towers[0].towerHitpoints, towers[0].towerAttackDamage, towers[0].towerAttackSpeed, towers[0].towerAttackRange));
+        CreateNewTower(new Tower(1, towers[1].towerHitpoints, towers[1].towerAttackDamage, towers[1].towerAttackSpeed, towers[1].towerAttackRange));
+        CreateNewTower(new Tower(2, towers[2].towerHitpoints, towers[2].towerAttackDamage, towers[2].towerAttackSpeed, towers[2].towerAttackRange));
+        CreateNewTower(new Tower(3, towers[3].towerHitpoints, towers[3].towerAttackDamage, towers[3].towerAttackSpeed, towers[3].towerAttackRange));
     }
 
     public void CreateNewEffect(Effect effect)

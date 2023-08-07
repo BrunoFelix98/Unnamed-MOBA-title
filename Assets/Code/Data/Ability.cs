@@ -14,7 +14,7 @@ public struct Ability
     [SerializeField]
     private bool passive; //True if passive, false if not
     [SerializeField]
-    private Effect[] effects;
+    private AbilityEffect[] effects;
     [SerializeField]
     private int level;
 
@@ -42,7 +42,7 @@ public struct Ability
         set => passive = value;
     }
 
-    public Effect[] Effects
+    public AbilityEffect[] Effects
     {
         get => effects;
         set => effects = value;
@@ -54,7 +54,7 @@ public struct Ability
         set => level = value;
     }
 
-    public Ability(int abilityID, double cooldown, string name, bool passive, Effect[] effects, int level)
+    public Ability(int abilityID, double cooldown, string name, bool passive, AbilityEffect[] effects, int level)
     {
         this.abilityID = abilityID;
         this.cooldown = cooldown;

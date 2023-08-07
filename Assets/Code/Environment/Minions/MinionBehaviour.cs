@@ -561,19 +561,19 @@ public class MinionBehaviour : MonoBehaviour
                     // Perform the attack (integer based on type of damage: 0 = physical, 1 = magical, 2 = true)
                     switch (minionData.MinionType)
                     {
-                        case MinionSpawning.MinionType.WARRIOR:
+                        case Enums.MinionType.WARRIOR:
                             if (targetMinion != null)
                             {
                                 targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionAttackDamage, 0);
                             }
                             break;
-                        case MinionSpawning.MinionType.MAGE:
+                        case Enums.MinionType.MAGE:
                             if (targetMinion != null)
                             {
                                 targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionMagicalDamage, 1);
                             }
                             break;
-                        case MinionSpawning.MinionType.SIEGE:
+                        case Enums.MinionType.SIEGE:
                             if (targetMinion != null)
                             {
                                 targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionAttackDamage, 0);
@@ -606,19 +606,19 @@ public class MinionBehaviour : MonoBehaviour
                     // Perform the attack (integer based on type of damage: 0 = physical, 1 = magical, 2 = true)
                     switch (minionData.MinionType)
                     {
-                        case MinionSpawning.MinionType.WARRIOR:
+                        case Enums.MinionType.WARRIOR:
                             if (targetTower != null)
                             {
                                 targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionAttackDamage, 0);
                             }
                             break;
-                        case MinionSpawning.MinionType.MAGE:
+                        case Enums.MinionType.MAGE:
                             if (targetTower != null)
                             {
                                 targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionMagicalDamage, 1);
                             }
                             break;
-                        case MinionSpawning.MinionType.SIEGE:
+                        case Enums.MinionType.SIEGE:
                             if (targetTower != null)
                             {
                                 targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionAttackDamage, 0);

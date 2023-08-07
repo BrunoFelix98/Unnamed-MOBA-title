@@ -14,7 +14,7 @@ public struct Item
     [SerializeField]
     private bool hasActive; //True if has active, false if not
     [SerializeField]
-    private Effect[] effects;
+    private ItemEffect[] effects;
 
     public int ItemID
     {
@@ -40,13 +40,13 @@ public struct Item
         set => hasActive = value;
     }
 
-    public Effect[] Effects
+    public ItemEffect[] Effects
     {
         get => effects;
         set => effects = value;
     }
 
-    public Item(int itemID, string name, double cooldown, bool hasActive, Effect[] effects)
+    public Item(int itemID, string name, double cooldown, bool hasActive, ItemEffect[] effects)
     {
         this.itemID = itemID;
         this.name = name;

@@ -8,7 +8,7 @@ public struct Minion
     [SerializeField]
     private int minionID;
     [SerializeField]
-    private MinionSpawning.MinionType minionType;
+    private Enums.MinionType minionType;
     [SerializeField]
     private double minionHitpoints;
     [SerializeField]
@@ -30,7 +30,7 @@ public struct Minion
     [SerializeField]
     private double minionVisionRange;
 
-    public MinionSpawning.MinionType MinionType
+    public Enums.MinionType MinionType
     {
         get => minionType; 
         set => minionType = value;
@@ -102,7 +102,7 @@ public struct Minion
         set => minionCurrentHitpoints = value;
     }
 
-    public Minion(int minionID, MinionSpawning.MinionType minionType, double minionHitpoints, double minionPhysicalResistance, double minionMagicalResistance, double minionAttackDamage, double minionMagicalDamage, double minionMovementSpeed, double minionAttackRange, float minionAttackSpeed, double minionVisionRange, double minionCurrentHitpoints)
+    public Minion(int minionID, Enums.MinionType minionType, double minionHitpoints, double minionCurrentHitpoints, double minionPhysicalResistance, double minionMagicalResistance, double minionAttackDamage, double minionMagicalDamage, double minionMovementSpeed, double minionAttackRange, float minionAttackSpeed, double minionVisionRange)
     {
         this.minionID = minionID;
         this.minionType = minionType;

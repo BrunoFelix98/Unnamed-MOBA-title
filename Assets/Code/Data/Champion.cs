@@ -18,7 +18,7 @@ public struct Champion
     [SerializeField]
     private double movementSpeed;
     [SerializeField]
-    private Ability[] abilities;
+    private AbilitiesScriptable[] abilities;
     [SerializeField]
     private double physicalResistance; //Treat it as armor
     [SerializeField]
@@ -84,7 +84,7 @@ public struct Champion
         set => movementSpeed = value;
     }
 
-    public Ability[] Abilities
+    public AbilitiesScriptable[] Abilities
     {
         get => abilities;
         set => abilities = value;
@@ -174,7 +174,7 @@ public struct Champion
         set => attackRange = value;
     }
 
-    public Champion(int championID, string name, bool ranged, double maxHitPoints, double maxManaPoints, double movementSpeed, Ability[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange)
+    public Champion(int championID, string name, bool ranged, double maxHitPoints, double maxManaPoints, double movementSpeed, AbilitiesScriptable[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange)
     {
         this.championID = championID;
         this.name = name;
