@@ -19,6 +19,7 @@ MonoBehaviour:
   championIsRanged: 0
   championName: Olaf
   championMaxHitPoints: 500
+  championCurrentHitPoints: 500
   championMaxManaPoints: 300
   championMovementSpeed: 3.5
   championPhysicalResistance: 20
@@ -32,5 +33,6 @@ MonoBehaviour:
   championManaRegeneration: 1.5
   championCriticalStrikeDamage: 200
   championAttackRange: 1
+  championAttackSpeed: 0
   championAbilities:
   - {fileID: 11400000, guid: 81c713df1f86b5f49a0369a5cd64834d, type: 2}

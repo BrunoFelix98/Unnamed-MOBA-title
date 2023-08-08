@@ -12,7 +12,7 @@ public struct Infusions
     [SerializeField]
     private double cooldown;
     [SerializeField]
-    private InfusionsEffect[] effects;
+    private StatsChangeScriptable[] effects;
 
     public int InfusionID
     {
@@ -32,13 +32,13 @@ public struct Infusions
         set => cooldown = value;
     }
 
-    public InfusionsEffect[] Effects
+    public StatsChangeScriptable[] Effects
     {
         get => effects;
         set => effects = value;
     }
     
-    public Infusions(int infusionID, string name, double cooldown, InfusionsEffect[] effects)
+    public Infusions(int infusionID, string name, double cooldown, StatsChangeScriptable[] effects)
     {
         this.infusionID = infusionID;
         this.name = name;

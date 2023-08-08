@@ -6,19 +6,27 @@ using UnityEngine;
 public struct Champion
 {
     [SerializeField]
-    private int championID;
-    [SerializeField]
-    private string name;
-    [SerializeField]
     private bool ranged; //True if ranged, false if not
     [SerializeField]
+    private int championID;
+    [SerializeField]
+    private int lifestealPercent; //Affects abilities AND auto attacks
+    [SerializeField]
+    private int disableReductionPercent; //Treat it as "tenacity"
+    [SerializeField]
+    private int criticalStrikeChance;
+    [SerializeField]
     private double maxHitPoints;
+    [SerializeField]
+    private double currentHitPoints;
     [SerializeField]
     private double maxManaPoints;
     [SerializeField]
     private double movementSpeed;
     [SerializeField]
     private AbilitiesScriptable[] abilities;
+    [SerializeField]
+    private ItemsScriptable[] items;
     [SerializeField]
     private double physicalResistance; //Treat it as armor
     [SerializeField]
@@ -38,15 +46,13 @@ public struct Champion
     [SerializeField]
     private double manaRegeneration;
     [SerializeField]
-    private int criticalStrikeChance;
-    [SerializeField]
     private double criticalStrikeDamage;
     [SerializeField]
-    private int lifestealPercent; //Affects abilities AND auto attacks
-    [SerializeField]
-    private int disableReductionPercent; //Treat it as "tenacity"
-    [SerializeField]
     private double attackRange;
+    [SerializeField]
+    private double attackSpeed;
+    [SerializeField]
+    private string name;
 
     public int ChampionID
     {
@@ -174,7 +180,23 @@ public struct Champion
         set => attackRange = value;
     }
 
-    public Champion(int championID, string name, bool ranged, double maxHitPoints, double maxManaPoints, double movementSpeed, AbilitiesScriptable[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange)
+    public double AttackSpeed {
+        get => attackSpeed;
+        set => attackSpeed = value;
+    }
+
+    public double CurrentHitPoints {
+        get => currentHitPoints;
+        set => currentHitPoints = value;
+    }
+
+    public ItemsScriptable[] Items
+    {
+        get => items;
+        set => items = value;
+    }
+
+    public Champion(int championID, string name, bool ranged, double maxHitPoints, double currentHitPoints, double maxManaPoints, double movementSpeed, AbilitiesScriptable[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange, double attackSpeed, ItemsScriptable[] items)
     {
         this.championID = championID;
         this.name = name;
@@ -197,5 +219,8 @@ public struct Champion
         this.lifestealPercent = lifestealPercent;
         this.disableReductionPercent = disableReductionPercent;
         this.attackRange = attackRange;
+        this.attackSpeed = attackSpeed;
+        this.currentHitPoints = currentHitPoints;
+        this.items = items;
     }
 }

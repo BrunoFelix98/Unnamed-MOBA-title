@@ -2557,6 +2557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f57c4bab4c3cf4e8563844a7c95fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 11400000, guid: 8dcabca0b206b694091ec02bc7190227, type: 2}
   champions:
   - {fileID: 11400000, guid: fc83f852604c1d24a9c0fd2e7cdb6058, type: 2}
   abilities:

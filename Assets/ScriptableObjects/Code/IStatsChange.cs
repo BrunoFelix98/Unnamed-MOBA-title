@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ItemEffect
+public interface IStatsChange
 {
-
+    public void AddEffect(Champion champion);
 }

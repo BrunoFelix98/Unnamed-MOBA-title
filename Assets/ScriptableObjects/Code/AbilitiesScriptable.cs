@@ -9,6 +9,6 @@ public class AbilitiesScriptable : ScriptableObject
     public double abilityCooldown;
     public string abilityName;
     public bool abilityIsPassive;
-    public AbilityEffect[] abilityEffects;
+    public StatsChangeScriptable[] abilityEffects;
     public int abilityLevel;
 }

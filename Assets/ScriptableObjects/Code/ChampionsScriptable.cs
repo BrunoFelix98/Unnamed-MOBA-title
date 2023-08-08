@@ -12,6 +12,7 @@ public class ChampionsScriptable : ScriptableObject
     public bool championIsRanged;
     public string championName;
     public double championMaxHitPoints;
+    public double championCurrentHitPoints;
     public double championMaxManaPoints;
     public double championMovementSpeed;
     public double championPhysicalResistance;
@@ -25,5 +26,7 @@ public class ChampionsScriptable : ScriptableObject
     public double championManaRegeneration;
     public double championCriticalStrikeDamage;
     public double championAttackRange;
+    public double championAttackSpeed;
     public AbilitiesScriptable[] championAbilities;
+    public ItemsScriptable[] championItems;
 }

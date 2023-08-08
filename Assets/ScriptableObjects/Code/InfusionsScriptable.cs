@@ -7,5 +7,5 @@ public class InfusionsScriptable : ScriptableObject
 {
     public string infusionName;
     public double infusioncooldown;
-    public InfusionsEffect[] infusionEffects;
+    public StatsChangeScriptable[] infusionEffects;
 }

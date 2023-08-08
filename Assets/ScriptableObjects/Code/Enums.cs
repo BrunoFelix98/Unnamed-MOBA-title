@@ -44,6 +44,7 @@ public class Enums
         ATTACKRANGE,
         RESOURCE,
         RESOURCEREGEN,
-        COOLDOWN
+        COOLDOWN,
+        LIFESTEAL
     }
 }
