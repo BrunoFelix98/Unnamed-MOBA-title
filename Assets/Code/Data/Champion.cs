@@ -24,9 +24,7 @@ public struct Champion
     [SerializeField]
     private double movementSpeed;
     [SerializeField]
-    private AbilitiesScriptable[] abilities;
-    [SerializeField]
-    private ItemsScriptable[] items;
+    private ChampionAbilities[] abilities;
     [SerializeField]
     private double physicalResistance; //Treat it as armor
     [SerializeField]
@@ -90,7 +88,7 @@ public struct Champion
         set => movementSpeed = value;
     }
 
-    public AbilitiesScriptable[] Abilities
+    public ChampionAbilities[] Abilities
     {
         get => abilities;
         set => abilities = value;
@@ -190,13 +188,7 @@ public struct Champion
         set => currentHitPoints = value;
     }
 
-    public ItemsScriptable[] Items
-    {
-        get => items;
-        set => items = value;
-    }
-
-    public Champion(int championID, string name, bool ranged, double maxHitPoints, double currentHitPoints, double maxManaPoints, double movementSpeed, AbilitiesScriptable[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange, double attackSpeed, ItemsScriptable[] items)
+    public Champion(int championID, string name, bool ranged, double maxHitPoints, double currentHitPoints, double maxManaPoints, double movementSpeed, ChampionAbilities[] abilities, double physicalResistance, double magicalResistance, double physicalDamage, double magicalDamage, double physicalResistanceIgnore, double magicalResistanceIgnore, double cooldownReduction, double healthRegeneration, double manaRegeneration, int criticalStrikeChance, double criticalStrikeDamage, int lifestealPercent, int disableReductionPercent, double attackRange, double attackSpeed)
     {
         this.championID = championID;
         this.name = name;
@@ -221,6 +213,5 @@ public struct Champion
         this.attackRange = attackRange;
         this.attackSpeed = attackSpeed;
         this.currentHitPoints = currentHitPoints;
-        this.items = items;
     }
 }

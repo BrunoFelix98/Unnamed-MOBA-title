@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IStatsChange
 {
-    public void AddEffect(Champion champion);
+    public void AddEffect(PlayerData player);
+    public void RemoveEffect(PlayerData player);
 }

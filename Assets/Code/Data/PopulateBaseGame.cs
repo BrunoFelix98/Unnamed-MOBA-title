@@ -48,24 +48,6 @@ public class PopulateBaseGame : MonoBehaviour
         PopulateAllTowers();
     }
 
-    void Update()
-    {
-        for (int i = 0; i < championsList.Count; i++)
-        {
-            if (championsList[i].Items.Length > 0)
-            {
-                for (int j = 0; j < championsList[i].Items.Length; j++)
-                {
-                    for (int z = 0; z < championsList[i].Items[j].itemEffects.Length; z++)
-                    {
-                        championsList[i].Items[j].itemEffects[z].AddEffect(championsList[i]);
-                        championsList[i].Items[j].itemEffects[z].effectGiven = true;
-                    }
-                }
-            }
-        }
-    }
-
     //-----------BELOW ARE ONLY EXAMPLES-----------//
 
     public void PopulateAllItems()
@@ -90,7 +72,7 @@ public class PopulateBaseGame : MonoBehaviour
 
     public void PopulateAllChampions()
     {
-        CreateNewChampion(new Champion(0, champions[0].championName, champions[0].championIsRanged, champions[0].championMaxHitPoints, champions[0].championCurrentHitPoints, champions[0].championMaxManaPoints, champions[0].championMovementSpeed, champions[0].championAbilities, champions[0].championPhysicalResistance, champions[0].championMagicalResistance, champions[0].championPhysicalDamage, champions[0].championMagicalDamage, champions[0].championPhysicalResistanceIgnore, champions[0].championMagicalResistanceIgnore, champions[0].championCooldownReduction, champions[0].championHealthRegeneration, champions[0].championManaRegeneration, champions[0].championCriticalStrikeChance, champions[0].championCriticalStrikeDamage, champions[0].championLifestealPercent, champions[0].championDisableReductionPercent, champions[0].championAttackRange, champions[0].championAttackSpeed, champions[0].championItems));
+        CreateNewChampion(new Champion(0, champions[0].championName, champions[0].championIsRanged, champions[0].championMaxHitPoints, champions[0].championCurrentHitPoints, champions[0].championMaxManaPoints, champions[0].championMovementSpeed, champions[0].championAbilities, champions[0].championPhysicalResistance, champions[0].championMagicalResistance, champions[0].championPhysicalDamage, champions[0].championMagicalDamage, champions[0].championPhysicalResistanceIgnore, champions[0].championMagicalResistanceIgnore, champions[0].championCooldownReduction, champions[0].championHealthRegeneration, champions[0].championManaRegeneration, champions[0].championCriticalStrikeChance, champions[0].championCriticalStrikeDamage, champions[0].championLifestealPercent, champions[0].championDisableReductionPercent, champions[0].championAttackRange, champions[0].championAttackSpeed));
     }
 
     public void PopulateAllMinions()

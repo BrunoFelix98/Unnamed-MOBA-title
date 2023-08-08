@@ -27,6 +27,5 @@ public class ChampionsScriptable : ScriptableObject
     public double championCriticalStrikeDamage;
     public double championAttackRange;
     public double championAttackSpeed;
-    public AbilitiesScriptable[] championAbilities;
-    public ItemsScriptable[] championItems;
+    public ChampionAbilities[] championAbilities;
 }
