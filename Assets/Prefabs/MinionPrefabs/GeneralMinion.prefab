@@ -18,8 +18,9 @@ GameObject:
   - component: {fileID: 4972449875574896081}
   - component: {fileID: 8808164618034009466}
   - component: {fileID: 1144565919419506349}
+  - component: {fileID: -4124932578473468686}
   m_Layer: 0
-  m_Name: Minion
+  m_Name: GeneralMinion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,3 +237,27 @@ MonoBehaviour:
   compressRotation: 0
   positionPrecision: 0.01
   scalePrecision: 0.01
+--- !u!114 &-4124932578473468686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156100916981468025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2e9f7cb11d04246b89246547f126aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionType: 0
+  minionAttackSpeed: 0
+  minionHitpoints: 0
+  minionCurrentHitpoints: 0
+  minionPhysicalResistance: 0
+  minionMagicalResistance: 0
+  minionAttackDamage: 0
+  minionMagicalDamage: 0
+  minionMovementSpeed: 0
+  minionAttackRange: 0
+  minionVisionRange: 0
+  selectedMinion: {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}

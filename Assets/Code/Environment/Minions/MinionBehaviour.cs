@@ -7,12 +7,13 @@ public class MinionBehaviour : MonoBehaviour
 {
     public NavMeshAgent minionAgent;
     public static MinionBehaviour instance;
-    public Minion minionData;
+    public MinionData minionData;
     public int laneNumber;
 
     public Transform[] waypoints;
     public int currentWaypointID;
     public Transform currentTarget;
+    public Vector3 currentDestination;
 
     public MinionStates currentState;
 
@@ -40,15 +41,19 @@ public class MinionBehaviour : MonoBehaviour
 
         currentWaypointID = 0; //Initialise current waypoint
 
+        minionData = this.GetComponent<MinionData>();
+
+        waypoints = minionData.waypoints;
+
         minionAgent.SetDestination(waypoints[currentWaypointID].position); //Set the first destination
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, (float)minionData.MinionVisionRange);
+        Gizmos.DrawWireSphere(transform.position, (float)minionData.minionVisionRange);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, (float)minionData.MinionAttackRange);
+        Gizmos.DrawWireSphere(transform.position, (float)minionData.minionAttackRange);
     }
 
     // Update is called once per frame
@@ -66,17 +71,22 @@ public class MinionBehaviour : MonoBehaviour
                     if (currentWaypointID == waypoints.Length)
                     {
                         minionAgent.ResetPath(); //Reached last waypoint
+                        print("Path reset");
                     }
                     else if (Vector3.Distance(transform.position, new Vector3(waypoints[currentWaypointID].position.x, 1, waypoints[currentWaypointID].position.z)) <= minionAgent.stoppingDistance)
                     {
                         //Reached a waypoint that isn't the last waypoint
                         currentWaypointID = (currentWaypointID + 1) % waypoints.Length;
-                        minionAgent.SetDestination(new Vector3(waypoints[currentWaypointID].position.x, 1, waypoints[currentWaypointID].position.z));
+                        currentDestination = new Vector3(waypoints[currentWaypointID].position.x, 1, waypoints[currentWaypointID].position.z);
+                        minionAgent.SetDestination(currentDestination);
+                        print("Following Path");
                     }
                     else
                     {
                         //Resuming the path if it hasn't reached the current waypoint
-                        minionAgent.SetDestination(new Vector3(waypoints[currentWaypointID].position.x, 1, waypoints[currentWaypointID].position.z));
+                        currentDestination = new Vector3(waypoints[currentWaypointID].position.x, 1, waypoints[currentWaypointID].position.z);
+                        minionAgent.SetDestination(currentDestination);
+                        print("Haven't reached the end");
                     }
                 }
 
@@ -452,7 +462,7 @@ public class MinionBehaviour : MonoBehaviour
                 {
                     float distance = Vector3.Distance(transform.position, otherTeamMinion.transform.position);
                     
-                    if (distance <= minionData.MinionVisionRange)
+                    if (distance <= minionData.minionVisionRange)
                     {
                         if (!potentialTargets.Contains(otherTeamMinion.transform))
                         {
@@ -487,11 +497,11 @@ public class MinionBehaviour : MonoBehaviour
                 currentTarget = closestTarget;
 
                 //Check if the closest target is in attack range, if its not, follow it, if its not close enough to see, then go back to following the path
-                if (closestDistance <= minionData.MinionAttackRange)
+                if (closestDistance <= minionData.minionAttackRange)
                 {
                     currentState = MinionStates.ATTACKTARGET;
                 }
-                else if (closestDistance <= minionData.MinionVisionRange)
+                else if (closestDistance <= minionData.minionVisionRange)
                 {
                     minionAgent.SetDestination(currentTarget.transform.position);
                 }
@@ -509,7 +519,7 @@ public class MinionBehaviour : MonoBehaviour
 
                 if (currentTarget != null)
                 {
-                    if (Vector3.Distance(transform.position, currentTarget.position) > minionData.MinionAttackRange)
+                    if (Vector3.Distance(transform.position, currentTarget.position) > minionData.minionAttackRange)
                     {
                         minionAgent.SetDestination(currentTarget.position);
                     }
@@ -553,30 +563,30 @@ public class MinionBehaviour : MonoBehaviour
             {
                 MinionBehaviour targetMinion = target.GetComponent<MinionBehaviour>();
 
-                while (targetMinion.minionData.MinionCurrentHitpoints > 0)
+                while (targetMinion.minionData.minionCurrentHitpoints > 0)
                 {
                     // Wait for the attack speed
-                    yield return new WaitForSeconds(minionData.MinionAttackSpeed);
+                    yield return new WaitForSeconds(minionData.minionAttackSpeed);
 
                     // Perform the attack (integer based on type of damage: 0 = physical, 1 = magical, 2 = true)
-                    switch (minionData.MinionType)
+                    switch (minionData.minionType)
                     {
                         case Enums.MinionType.WARRIOR:
                             if (targetMinion != null)
                             {
-                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionAttackDamage, 0);
+                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.minionAttackDamage, 0);
                             }
                             break;
                         case Enums.MinionType.MAGE:
                             if (targetMinion != null)
                             {
-                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionMagicalDamage, 1);
+                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.minionMagicalDamage, 1);
                             }
                             break;
                         case Enums.MinionType.SIEGE:
                             if (targetMinion != null)
                             {
-                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.MinionAttackDamage, 0);
+                                targetMinion.GetComponent<MinionHealth>().TakeDamage(targetMinion.transform, minionData.minionAttackDamage, 0);
                             }
                             break;
                         default:
@@ -584,7 +594,7 @@ public class MinionBehaviour : MonoBehaviour
                     }
 
                     // Check if the target is still alive
-                    if (targetMinion.minionData.MinionCurrentHitpoints <= 0)
+                    if (targetMinion.minionData.minionCurrentHitpoints <= 0)
                     {
                         RefreshLists();
                         StopAttack();
@@ -601,27 +611,27 @@ public class MinionBehaviour : MonoBehaviour
                 while (targetTower.towerData.Hitpoints > 0)
                 {
                     // Wait for the attack speed
-                    yield return new WaitForSeconds(minionData.MinionAttackSpeed);
+                    yield return new WaitForSeconds(minionData.minionAttackSpeed);
 
                     // Perform the attack (integer based on type of damage: 0 = physical, 1 = magical, 2 = true)
-                    switch (minionData.MinionType)
+                    switch (minionData.minionType)
                     {
                         case Enums.MinionType.WARRIOR:
                             if (targetTower != null)
                             {
-                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionAttackDamage, 0);
+                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.minionAttackDamage, 0);
                             }
                             break;
                         case Enums.MinionType.MAGE:
                             if (targetTower != null)
                             {
-                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionMagicalDamage, 1);
+                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.minionMagicalDamage, 1);
                             }
                             break;
                         case Enums.MinionType.SIEGE:
                             if (targetTower != null)
                             {
-                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.MinionAttackDamage, 0);
+                                targetTower.GetComponent<TowerHealth>().TakeDamage(targetTower.transform, minionData.minionAttackDamage, 0);
                             }
                             break;
                         default:

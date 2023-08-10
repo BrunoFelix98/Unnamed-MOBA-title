@@ -44,27 +44,27 @@ public class TowerHealth : MonoBehaviour
             switch (type)
             {
                 case 0: //Physical
-                    if ((damage - minionEntity.minionData.MinionPhysicalResistance) > 0)
+                    if ((damage - minionEntity.minionData.minionPhysicalResistance) > 0)
                     {
-                        minionEntity.minionData.MinionCurrentHitpoints -= (damage - minionEntity.minionData.MinionPhysicalResistance);
+                        minionEntity.minionData.minionCurrentHitpoints -= (damage - minionEntity.minionData.minionPhysicalResistance);
                     }
                     else
                     {
-                        minionEntity.minionData.MinionCurrentHitpoints--;
+                        minionEntity.minionData.minionCurrentHitpoints--;
                     }
                     break;
                 case 1: //Magical
-                    if ((damage - minionEntity.minionData.MinionMagicalResistance) > 0)
+                    if ((damage - minionEntity.minionData.minionMagicalResistance) > 0)
                     {
-                        minionEntity.minionData.MinionCurrentHitpoints -= (damage - minionEntity.minionData.MinionMagicalResistance);
+                        minionEntity.minionData.minionCurrentHitpoints -= (damage - minionEntity.minionData.minionMagicalResistance);
                     }
                     else
                     {
-                        minionEntity.minionData.MinionCurrentHitpoints--;
+                        minionEntity.minionData.minionCurrentHitpoints--;
                     }
                     break;
                 case 2: //True
-                    minionEntity.minionData.MinionCurrentHitpoints -= damage;
+                    minionEntity.minionData.minionCurrentHitpoints -= damage;
                     break;
                 default:
                     break;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class MinionSpawning : MonoBehaviour
 {
@@ -71,7 +72,8 @@ public class MinionSpawning : MonoBehaviour
     //PREFABS
     [SerializeField]
     protected GameObject minionPrefab;
-
+    [SerializeField]
+    protected GameObject[] minionWave;
 
     //MINION COLORS *for now*
     [SerializeField]
@@ -92,9 +94,48 @@ public class MinionSpawning : MonoBehaviour
 
     public GameObject towerPrefab;
 
+    public ObjectPool<GameObject> minionsPoolRedToGreen;
+    public ObjectPool<GameObject> minionsPoolRedToBlue;
+    public ObjectPool<GameObject> minionsPoolRedToYellow;
+    public ObjectPool<GameObject> minionsPoolBlueToYellow;
+    public ObjectPool<GameObject> minionsPoolBlueToRed;
+    public ObjectPool<GameObject> minionsPoolBlueToGreen;
+    public ObjectPool<GameObject> minionsPoolGreenToBlue;
+    public ObjectPool<GameObject> minionsPoolGreenToYellow;
+    public ObjectPool<GameObject> minionsPoolGreenToRed;
+    public ObjectPool<GameObject> minionsPoolYellowToRed;
+    public ObjectPool<GameObject> minionsPoolYellowToGreen;
+    public ObjectPool<GameObject> minionsPoolYellowToBlue;
+
+    public bool usingRedToGreenPool;
+    public bool usingRedToBluePool;
+    public bool usingRedToYellowPool;
+    public bool usingBlueToYellowPool;
+    public bool usingBlueToRedPool;
+    public bool usingBlueToGreenPool;
+    public bool usingGreenToBluePool;
+    public bool usingGreenToYellowPool;
+    public bool usingGreenToRedPool;
+    public bool usingYellowToRedPool;
+    public bool usingYellowToGreenPool;
+    public bool usingYellowToBluePool;
+
     void Awake()
     {
         instance = this;
+
+        minionsPoolRedToGreen = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolRedToBlue = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolRedToYellow = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolBlueToYellow = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolBlueToRed = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolBlueToGreen = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolGreenToBlue = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolGreenToYellow = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolGreenToRed = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolYellowToRed = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolYellowToGreen = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
+        minionsPoolYellowToBlue = new ObjectPool<GameObject>(() => { return Instantiate(minionPrefab); }, minionPrefab => minionPrefab.SetActive(true), minionPrefab => gameObject.SetActive(false), minionPrefab => Destroy(minionPrefab.gameObject), false, 35, 40);
 
         redToGreen = GameObject.FindGameObjectWithTag("RedToGreen");
         redSpawnMid = GameObject.FindGameObjectWithTag("RedSpawnMid");
@@ -129,9 +170,34 @@ public class MinionSpawning : MonoBehaviour
     void Start()
     {
         spawning = false;
-        spawnTimer = 40.0f;
+        spawnTimer = 10.0f;
         StartCoroutine(SpawnWave());
         SpawnTowers();
+    }
+
+    public void SpawnMinionsRedToGreen(Transform[] waypoints, Material material)
+    {
+        GameObject minion;
+
+        if (usingRedToGreenPool)
+        {
+            minion = minionsPoolRedToGreen.Get();
+            minion.transform.position = new Vector3(redToGreen.transform.position.x, 1, redToGreen.transform.position.z);
+            minion.transform.rotation = Quaternion.identity;
+        }
+        else
+        {
+            minion = Instantiate(minionPrefab);
+            minion.transform.position = new Vector3(redToGreen.transform.position.x, 1, redToGreen.transform.position.z);
+            minion.transform.rotation = Quaternion.identity;
+        }
+        
+        minion.GetComponent<MeshRenderer>().material = material;
+        minion.tag = "RedTeam";
+        MinionBehaviour redminionAgent = minion.GetComponent<MinionBehaviour>();
+        redminionAgent.laneNumber = 0;
+        redminionAgent.minionData = redminionAgent.GetComponent<MinionData>();
+        redminionAgent.waypoints = waypoints;
     }
 
     public void SpawnTowers()
@@ -374,7 +440,7 @@ public class MinionSpawning : MonoBehaviour
         minion.tag = "RedTeam";
         MinionBehaviour redminionAgent = minion.GetComponent<MinionBehaviour>();
         redminionAgent.laneNumber = laneNumber;
-        redminionAgent.minionData = PopulateBaseGame.instance.minionsList[type];
+        redminionAgent.minionData = redminionAgent.GetComponent<MinionData>();
         redminionAgent.waypoints = waypoints;
     }
 
@@ -387,7 +453,7 @@ public class MinionSpawning : MonoBehaviour
         minion.tag = "BlueTeam";
         MinionBehaviour blueMinionAgent = minion.GetComponent<MinionBehaviour>();
         blueMinionAgent.laneNumber = laneNumber;
-        blueMinionAgent.minionData = PopulateBaseGame.instance.minionsList[type];
+        blueMinionAgent.minionData = blueMinionAgent.GetComponent<MinionData>();
         blueMinionAgent.waypoints = waypoints;
     }
 
@@ -400,7 +466,7 @@ public class MinionSpawning : MonoBehaviour
         minion.tag = "GreenTeam";
         MinionBehaviour greenMinionAgent = minion.GetComponent<MinionBehaviour>();
         greenMinionAgent.laneNumber = laneNumber;
-        greenMinionAgent.minionData = PopulateBaseGame.instance.minionsList[type];
+        greenMinionAgent.minionData = greenMinionAgent.GetComponent<MinionData>();
         greenMinionAgent.waypoints = waypoints;
     }
 
@@ -413,7 +479,7 @@ public class MinionSpawning : MonoBehaviour
         minion.tag = "YellowTeam";
         MinionBehaviour yellowMinionAgent = minion.GetComponent<MinionBehaviour>();
         yellowMinionAgent.laneNumber = laneNumber;
-        yellowMinionAgent.minionData = PopulateBaseGame.instance.minionsList[type];
+        yellowMinionAgent.minionData = yellowMinionAgent.GetComponent<MinionData>();
         yellowMinionAgent.waypoints = waypoints;
     }
 }
