@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPoint;
     public float spawnInterval = 0.5f;
 
-    public Transform[] waypoints;
+    public GameObject enemyBase;
 
     [SerializeField]
     private float spawnTimer;
@@ -27,9 +26,11 @@ public class WaveSpawner : MonoBehaviour
     public int siegeSpawned = 0;
     public int magesSpawned = 0;
 
+    public Material teamMat; //Will be removed later with the scriptable object
+
     private void Start()
     {
-        spawnTimer = 10.0f;
+        spawnTimer = 40.0f;
         //currentMinion = warriorMinion;
         //minionPool = new ObjectPool<GameObject>(() => { return InstantiateMinion(currentMinion, this.transform); }, minion => minion.SetActive(true), minion => minion.SetActive(false), minion => Destroy(minion), false, 35, 42);
         StartCoroutine(SpawnWave());
@@ -40,6 +41,8 @@ public class WaveSpawner : MonoBehaviour
             minion.transform.rotation = Quaternion.identity;
             minion.tag = minionTag;
             allMinionsInLaneInactive.Add(minion);
+            minion.layer = 6;
+            minion.GetComponent<Renderer>().material = teamMat;
             minion.SetActive(false);
         }
     }
@@ -60,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
         minion.minionAttackRange = minionScriptable[index].minionAttackRange;
         minion.minionVisionRange = minionScriptable[index].minionVisionRange;
 
-        minion.waypoints = waypoints;
+        minion.enemyBase = enemyBase;
 
         minion.selectedMinion = minionScriptable[index];
 
@@ -96,7 +99,6 @@ public class WaveSpawner : MonoBehaviour
                 MinionData data = allMinionsInLaneInactive[currentMinion].GetComponent<MinionData>();
                 SetMinionToActive(data, currentMinion);
                 UpdateSpawnedCount(data);
-                print("update spawned" + data.minionType);
             }
         }
     }

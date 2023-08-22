@@ -20,9 +20,9 @@ public class Health : MonoBehaviour
     [Server]
     public void TakeDamage(Transform entity, double damage, int type)
     {
-        if (entity.GetComponent<MinionBehaviour>() != null)
+        if (entity.GetComponent<MinionAI>() != null)
         {
-            MinionBehaviour minionEntity = entity.GetComponent<MinionBehaviour>();
+            MinionAI minionEntity = entity.GetComponent<MinionAI>();
 
             switch (type)
             {

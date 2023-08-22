@@ -17,7 +17,7 @@ public class MinionData : MonoBehaviour
     public double minionAttackRange;
     public double minionVisionRange;
 
-    public Transform[] waypoints;
+    public GameObject enemyBase;
 
     public MinionScriptable selectedMinion;
 }

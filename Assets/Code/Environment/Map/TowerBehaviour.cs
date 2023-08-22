@@ -5,7 +5,6 @@ using UnityEngine;
 public class TowerBehaviour : MonoBehaviour
 {
     public Tower towerData;
-    public int laneNumber;
 
     public float lastAttackTime = 0f;
     public GameObject currentTarget;

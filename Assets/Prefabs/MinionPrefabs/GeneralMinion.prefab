@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8808164618034009466}
   - component: {fileID: 1144565919419506349}
   - component: {fileID: -4124932578473468686}
+  - component: {fileID: 7803271107865379363}
   m_Layer: 0
   m_Name: GeneralMinion
   m_TagString: Untagged
@@ -130,12 +131,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 7156100916981468025}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -152,29 +153,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7156100916981468025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922d8a99d37368942b029a80b14fd592, type: 3}
+  m_Script: {fileID: 11500000, guid: 891c8785d4d65f44493dc314df6c612f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionAgent: {fileID: 5639894870827317917}
-  minionData:
-    minionID: 0
-    minionType: 0
-    minionHitpoints: 0
-    minionCurrentHitpoints: 0
-    minionPhysicalResistance: 0
-    minionMagicalResistance: 0
-    minionAttackDamage: 0
-    minionMagicalDamage: 0
-    minionMovementSpeed: 0
-    minionAttackRange: 0
-    minionAttackSpeed: 0
-    minionVisionRange: 0
+  minionAgent: {fileID: 0}
+  minionData: {fileID: 0}
   laneNumber: 0
-  waypoints: []
   currentWaypointID: 0
   currentTarget: {fileID: 0}
   currentState: 0
-  otherTeamEntities: []
+  otherTeamsEntities: []
   potentialTargets: []
   isAttacking: 0
 --- !u!114 &4972449875574896081
@@ -260,4 +248,18 @@ MonoBehaviour:
   minionMovementSpeed: 0
   minionAttackRange: 0
   minionVisionRange: 0
+  waypoints: []
   selectedMinion: {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+--- !u!135 &7803271107865379363
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156100916981468025}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

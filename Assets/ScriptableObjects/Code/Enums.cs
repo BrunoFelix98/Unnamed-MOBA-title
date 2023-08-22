@@ -18,6 +18,13 @@ public class Enums
         TRUE
     }
 
+    public enum MinionStates
+    {
+        FOLLOWLANE,
+        CHASETARGET,
+        ATTACKTARGET
+    }
+
     public enum TowerType
     {
         TIER1,

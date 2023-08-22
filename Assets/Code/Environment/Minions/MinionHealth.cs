@@ -6,11 +6,11 @@ using Mirror;
 public class MinionHealth : MonoBehaviour
 {
     public double health;
-    public MinionBehaviour itself;
+    public MinionAI itself;
 
     void Start()
     {
-        itself = GetComponent<MinionBehaviour>();
+        itself = GetComponent<MinionAI>();
     }
 
     void Update()
@@ -20,8 +20,8 @@ public class MinionHealth : MonoBehaviour
         if (health <= 0)
         {
             // Notify all minions that are attacking this target
-            MinionBehaviour[] attackingMinions = FindObjectsOfType<MinionBehaviour>();
-            foreach (MinionBehaviour attackingMinion in attackingMinions)
+            MinionAI[] attackingMinions = FindObjectsOfType<MinionAI>();
+            foreach (MinionAI attackingMinion in attackingMinions)
             {
                 if (attackingMinion.currentTarget == transform)
                 {
@@ -29,17 +29,24 @@ public class MinionHealth : MonoBehaviour
                 }
             }
 
-            // Destroy the target game object
-            Destroy(gameObject);
+            //Reset Minion
+            GetComponentInParent<WaveSpawner>().ResetMinion(gameObject);
+            itself.otherTeamsEntities = null;
+            itself.potentialTargets = null;
+            itself.currentTarget = null;
+            itself.currentState = Enums.MinionStates.FOLLOWLANE;
+            itself.isAttacking = false;
+            itself.attackRoutine = null;
+            health = 0;
         }
     }
 
     [Server]
     public void TakeDamage(Transform entity, double damage, int type)
     {
-        if (entity.GetComponent<MinionBehaviour>() != null)
+        if (entity.GetComponent<MinionAI>() != null)
         {
-            MinionBehaviour minionEntity = entity.GetComponent<MinionBehaviour>();
+            MinionAI minionEntity = entity.GetComponent<MinionAI>();
 
             switch (type)
             {

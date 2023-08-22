@@ -218,6 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22116360}
+  - component: {fileID: 22116361}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -240,6 +241,23 @@ Transform:
   m_Father: {fileID: 825750849}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22116361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22116359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &29776792
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29776793}
+  - component: {fileID: 29776794}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -271,6 +290,23 @@ Transform:
   m_Father: {fileID: 168321392}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29776794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29776792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &37475868
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37475869}
+  - component: {fileID: 37475870}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -302,6 +339,23 @@ Transform:
   m_Father: {fileID: 1078686145}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37475870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37475868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1001 &65463207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,20 +517,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warriorMinion: {fileID: 7156100916981468025, guid: 274eaaa98f5ae8f4687dca0913871524, type: 3}
-  siegeMinion: {fileID: 7156100916981468025, guid: 4d39072ababae0e4394a0f3bd0feaeed, type: 3}
-  mageMinion: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
   minionTag: RedTeam
-  currentMinion: {fileID: 0}
+  currentMinion: 0
   spawnPoint: {fileID: 82962737}
   spawnInterval: 0.5
+  enemyBase: {fileID: 73637820}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
   warriorsSpawned: 0
   siegeSpawned: 0
   magesSpawned: 0
-  waypoints:
-  - {fileID: 1727915120}
-  - {fileID: 73637821}
-  spawnTimer: 10
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1001 &89951675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,6 +628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97586927}
+  - component: {fileID: 97586928}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -594,6 +651,23 @@ Transform:
   m_Father: {fileID: 888068845}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97586928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97586926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &134925485
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 134925486}
+  - component: {fileID: 134925487}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -625,6 +700,23 @@ Transform:
   m_Father: {fileID: 1189929105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134925487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134925485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &151144101
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151144102}
+  - component: {fileID: 151144103}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -656,6 +749,23 @@ Transform:
   m_Father: {fileID: 542452526}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151144103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151144101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &168321391
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 181896752}
+  - component: {fileID: 181896753}
   m_Layer: 0
   m_Name: Red_Mid_Spawn
   m_TagString: RedSpawnMid
@@ -722,6 +833,34 @@ Transform:
   m_Father: {fileID: 1207121953}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181896753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181896751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: RedTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 181896752}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 208813397}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &208813397
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +925,7 @@ Transform:
   - {fileID: 73637821}
   - {fileID: 280224937}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &262648086
 PrefabInstance:
@@ -1121,6 +1260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322936590}
+  - component: {fileID: 322936591}
   m_Layer: 0
   m_Name: Red_To_Yellow
   m_TagString: RedToYellow
@@ -1143,6 +1283,34 @@ Transform:
   m_Father: {fileID: 1207121953}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322936591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322936589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: RedTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 322936590}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 280224936}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &361200634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 361200635}
+  - component: {fileID: 361200636}
   m_Layer: 0
   m_Name: Green_To_Red
   m_TagString: GreenToRed
@@ -1174,6 +1343,34 @@ Transform:
   m_Father: {fileID: 1748938014}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361200636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361200634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: GreenTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 361200635}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 1398402129}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &393004653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393004654}
+  - component: {fileID: 393004655}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -1205,6 +1403,23 @@ Transform:
   m_Father: {fileID: 508250581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393004655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393004653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &432268267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432268268}
+  - component: {fileID: 432268269}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -1236,6 +1452,23 @@ Transform:
   m_Father: {fileID: 697808796}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &432268269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432268267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &448857044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448857045}
+  - component: {fileID: 448857046}
   m_Layer: 0
   m_Name: Yellow_To_Red
   m_TagString: YellowToRed
@@ -1267,6 +1501,34 @@ Transform:
   m_Father: {fileID: 491633077}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448857046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448857044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: YellowTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 448857045}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 1398402129}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &477433308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477433309}
+  - component: {fileID: 477433310}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1298,6 +1561,23 @@ Transform:
   m_Father: {fileID: 576018034}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477433310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477433308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1001 &481027006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1427,6 +1707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492864064}
+  - component: {fileID: 492864065}
   m_Layer: 0
   m_Name: Blue_To_Green
   m_TagString: BlueToGreen
@@ -1449,6 +1730,34 @@ Transform:
   m_Father: {fileID: 1494693684}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492864065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492864063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: BlueTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 492864064}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 73637820}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &508250580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519869425}
+  - component: {fileID: 519869426}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1515,6 +1825,23 @@ Transform:
   m_Father: {fileID: 1078686145}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519869426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519869424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &535351660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604909795}
+  - component: {fileID: 604909796}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -1650,6 +1978,23 @@ Transform:
   m_Father: {fileID: 542452526}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &604909796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604909794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &618559087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +2212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 628464504}
+  - component: {fileID: 628464505}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1889,6 +2235,23 @@ Transform:
   m_Father: {fileID: 508250581}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628464505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628464503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1001 &637117737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1980,6 +2343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647836142}
+  - component: {fileID: 647836143}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -2002,6 +2366,23 @@ Transform:
   m_Father: {fileID: 576018034}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647836143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647836141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &664532683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664532684}
+  - component: {fileID: 664532685}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -2033,6 +2415,23 @@ Transform:
   m_Father: {fileID: 1187809367}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &664532685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664532683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1001 &689578690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,6 +2738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718625912}
+  - component: {fileID: 718625913}
   m_Layer: 0
   m_Name: Yellow_Mid_Spawn
   m_TagString: YellowSpawnMid
@@ -2361,6 +2761,34 @@ Transform:
   m_Father: {fileID: 491633077}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718625913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718625911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: YellowTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 718625912}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 73637820}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &733408686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,6 +2798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 733408687}
+  - component: {fileID: 733408688}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -2392,6 +2821,23 @@ Transform:
   m_Father: {fileID: 576018034}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733408688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733408686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &754665652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,68 +2905,6 @@ Transform:
   - {fileID: 754665653}
   - {fileID: 793630202}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &765073331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 765073332}
-  m_Layer: 0
-  m_Name: Mid_waypointYellow
-  m_TagString: MidWaypointYellow
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &765073332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765073331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77, y: 1, z: -60}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &780247388
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 780247389}
-  m_Layer: 0
-  m_Name: Mid_waypointGreen
-  m_TagString: MidWaypointGreen
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &780247389
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780247388}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -77, y: 1, z: 60}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788779790
@@ -2532,6 +2916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 788779791}
+  - component: {fileID: 788779792}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -2554,6 +2939,23 @@ Transform:
   m_Father: {fileID: 542452526}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788779792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788779790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &793630201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,7 +3000,6 @@ GameObject:
   m_Component:
   - component: {fileID: 796370875}
   - component: {fileID: 796370874}
-  - component: {fileID: 796370876}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -2659,114 +3060,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &796370876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796370873}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ab714e281cb67746815ec8fc76292c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redToGreen: {fileID: 0}
-  redSpawnMid: {fileID: 0}
-  redToYellow: {fileID: 0}
-  blueToYellow: {fileID: 0}
-  blueSpawnMid: {fileID: 0}
-  blueToGreen: {fileID: 0}
-  greenToBlue: {fileID: 0}
-  greenSpawnMid: {fileID: 0}
-  greenToRed: {fileID: 0}
-  yellowToRed: {fileID: 0}
-  yellowSpawnMid: {fileID: 0}
-  yellowToBlue: {fileID: 0}
-  spawnTimer: 40
-  spawning: 0
-  greenToRedToGreenWaypoint: {fileID: 0}
-  greenToBlueToGreenWaypoint: {fileID: 0}
-  yellowToRedToYellowWaypoint: {fileID: 0}
-  yellowToBlueToYellowWaypoint: {fileID: 0}
-  midWaypointRed: {fileID: 0}
-  midWaypointBlue: {fileID: 0}
-  midWaypointGreen: {fileID: 0}
-  midWaypointYellow: {fileID: 0}
-  blueBase: {fileID: 0}
-  redBase: {fileID: 0}
-  greenBase: {fileID: 0}
-  yellowBase: {fileID: 0}
-  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
-  minionWave: []
-  blueMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
-  redMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
-  greenMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
-  yellowMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
-  botTowersSpawnLocations:
-  - {fileID: 1361166945}
-  - {fileID: 477433309}
-  - {fileID: 733408687}
-  - {fileID: 647836142}
-  - {fileID: 1871026874}
-  - {fileID: 1580186066}
-  - {fileID: 1634938995}
-  - {fileID: 883920678}
-  - {fileID: 2021912342}
-  - {fileID: 1980795235}
-  - {fileID: 929115035}
-  - {fileID: 1039854947}
-  - {fileID: 2134055458}
-  - {fileID: 1585088799}
-  - {fileID: 432268268}
-  - {fileID: 1198665741}
-  midTowersSpawnLocations:
-  - {fileID: 1592946024}
-  - {fileID: 1916316038}
-  - {fileID: 97586927}
-  - {fileID: 1192747029}
-  - {fileID: 788779791}
-  - {fileID: 1041247868}
-  - {fileID: 604909795}
-  - {fileID: 151144102}
-  - {fileID: 393004654}
-  - {fileID: 1456419665}
-  - {fileID: 1114664939}
-  - {fileID: 628464504}
-  - {fileID: 966915929}
-  - {fileID: 1725420686}
-  - {fileID: 881527925}
-  - {fileID: 29776793}
-  topTowersSpawnLocations:
-  - {fileID: 1769588251}
-  - {fileID: 915677291}
-  - {fileID: 37475869}
-  - {fileID: 519869425}
-  - {fileID: 1069704330}
-  - {fileID: 2085714409}
-  - {fileID: 1595122411}
-  - {fileID: 664532684}
-  - {fileID: 1167098897}
-  - {fileID: 22116360}
-  - {fileID: 1887410124}
-  - {fileID: 1594190537}
-  - {fileID: 1094764507}
-  - {fileID: 134925486}
-  - {fileID: 1051191063}
-  - {fileID: 1720460535}
-  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
-  usingRedToGreenPool: 0
-  usingRedToBluePool: 0
-  usingRedToYellowPool: 0
-  usingBlueToYellowPool: 0
-  usingBlueToRedPool: 0
-  usingBlueToGreenPool: 0
-  usingGreenToBluePool: 0
-  usingGreenToYellowPool: 0
-  usingGreenToRedPool: 0
-  usingYellowToRedPool: 0
-  usingYellowToGreenPool: 0
-  usingYellowToBluePool: 0
 --- !u!1 &825750848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,6 +3190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881527925}
+  - component: {fileID: 881527926}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -2919,6 +3213,23 @@ Transform:
   m_Father: {fileID: 168321392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881527926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881527924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &883920677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,6 +3239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883920678}
+  - component: {fileID: 883920679}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -2950,37 +3262,23 @@ Transform:
   m_Father: {fileID: 1061030296}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &885962637
-GameObject:
+--- !u!114 &883920679
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 885962638}
-  m_Layer: 0
-  m_Name: Mid_waypointBlue
-  m_TagString: MidWaypointBlue
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &885962638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885962637}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60, y: 1, z: 77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 883920677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &888068844
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915677291}
+  - component: {fileID: 915677292}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -3219,6 +3518,23 @@ Transform:
   m_Father: {fileID: 1078686145}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915677292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915677290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &929115034
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,6 +3544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 929115035}
+  - component: {fileID: 929115036}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -3250,6 +3567,23 @@ Transform:
   m_Father: {fileID: 309890203}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929115036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929115034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966915929}
+  - component: {fileID: 966915930}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -3365,37 +3700,23 @@ Transform:
   m_Father: {fileID: 168321392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &980757240
-GameObject:
+--- !u!114 &966915930
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 980757241}
-  m_Layer: 0
-  m_Name: GreenToBlueToGreenWaypoint
-  m_TagString: GreenToBlueToGreenWaypoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &980757241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980757240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 425}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 966915928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1001 &1022827951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3487,6 +3808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1039854947}
+  - component: {fileID: 1039854948}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -3509,6 +3831,23 @@ Transform:
   m_Father: {fileID: 309890203}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039854948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039854946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1041247867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041247868}
+  - component: {fileID: 1041247869}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -3540,6 +3880,23 @@ Transform:
   m_Father: {fileID: 542452526}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041247869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041247867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1042249515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,6 +4065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1051191063}
+  - component: {fileID: 1051191064}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -3730,6 +4088,23 @@ Transform:
   m_Father: {fileID: 1189929105}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051191064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051191062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1001 &1052936845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3860,6 +4235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1069704330}
+  - component: {fileID: 1069704331}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -3882,6 +4258,23 @@ Transform:
   m_Father: {fileID: 1187809367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069704331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069704329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1078686144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,6 +4319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094764507}
+  - component: {fileID: 1094764508}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -3948,6 +4342,23 @@ Transform:
   m_Father: {fileID: 1189929105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094764508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094764506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &1114664938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,6 +4368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1114664939}
+  - component: {fileID: 1114664940}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -3979,6 +4391,23 @@ Transform:
   m_Father: {fileID: 508250581}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114664940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114664938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1001 &1119537287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4061,37 +4490,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb71b3d3299983a43ac18484c81f049f, type: 3}
   m_PrefabInstance: {fileID: 1119537287}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1163208408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1163208409}
-  m_Layer: 0
-  m_Name: YellowToBlueToYellowWaypoint
-  m_TagString: YellowToBlueToYellowWaypoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1163208409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163208408}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 425, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167098896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,6 +4499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167098897}
+  - component: {fileID: 1167098898}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -4123,6 +4522,23 @@ Transform:
   m_Father: {fileID: 825750849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167098898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167098896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1187809366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1192747029}
+  - component: {fileID: 1192747030}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -4224,6 +4641,23 @@ Transform:
   m_Father: {fileID: 888068845}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1192747030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192747028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &1198665740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,6 +4667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198665741}
+  - component: {fileID: 1198665742}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -4255,6 +4690,23 @@ Transform:
   m_Father: {fileID: 697808796}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198665742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198665740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &1199672062
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199672063}
+  - component: {fileID: 1199672064}
   m_Layer: 0
   m_Name: Yellow_To_Blue
   m_TagString: YellowToBlue
@@ -4286,6 +4739,34 @@ Transform:
   m_Father: {fileID: 491633077}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199672064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199672062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: YellowTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 1199672063}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 208813397}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &1207121952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4661,6 +5142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1361166945}
+  - component: {fileID: 1361166946}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -4683,6 +5165,23 @@ Transform:
   m_Father: {fileID: 576018034}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361166946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361166944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &1398402129
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,6 +5222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1456419665}
+  - component: {fileID: 1456419666}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -4745,6 +5245,23 @@ Transform:
   m_Father: {fileID: 508250581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456419666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456419664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1001 &1488605692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4865,45 +5382,6 @@ Transform:
   m_Father: {fileID: 1943498754}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1515694741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1515694742}
-  m_Layer: 0
-  m_Name: Waypoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1515694742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515694741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.89298, z: -0.000014051}
-  m_LocalScale: {x: 0.22942989, y: 0.22942989, z: 0.22942989}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2030912913}
-  - {fileID: 980757241}
-  - {fileID: 1727915120}
-  - {fileID: 1163208409}
-  - {fileID: 1775512966}
-  - {fileID: 885962638}
-  - {fileID: 780247389}
-  - {fileID: 765073332}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528867600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,6 +5391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1528867601}
+  - component: {fileID: 1528867602}
   m_Layer: 0
   m_Name: Blue_To_Yellow
   m_TagString: BlueToYellow
@@ -4935,6 +5414,34 @@ Transform:
   m_Father: {fileID: 1494693684}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528867602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528867600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: BlueTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 1528867601}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 280224936}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1001 &1529488750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5034,43 +5541,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2100
+      value: 1520.4255
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2100
+      value: 1489.7957
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1000.00024
+      value: 671.14966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.1246
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.031090735
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.031090738
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7064229
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7064229
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5082,7 +5589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 185.04
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8b1d1cad434c1244bb3c33325f84ef4f, type: 3}
       propertyPath: m_Name
@@ -5112,6 +5619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579949199}
+  - component: {fileID: 1579949200}
   m_Layer: 0
   m_Name: Green_To_Blue
   m_TagString: GreenToBlue
@@ -5134,6 +5642,34 @@ Transform:
   m_Father: {fileID: 1748938014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579949200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579949198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: GreenTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 1579949199}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 208813397}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1580186065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580186066}
+  - component: {fileID: 1580186067}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -5165,6 +5702,23 @@ Transform:
   m_Father: {fileID: 1061030296}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580186067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580186065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1585088798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,6 +5728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585088799}
+  - component: {fileID: 1585088800}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -5196,6 +5751,23 @@ Transform:
   m_Father: {fileID: 697808796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585088800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585088798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &1587205582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5205,6 +5777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587205583}
+  - component: {fileID: 1587205584}
   m_Layer: 0
   m_Name: Green_Mid_Spawn
   m_TagString: GreenSpawnMid
@@ -5227,6 +5800,34 @@ Transform:
   m_Father: {fileID: 1748938014}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587205584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587205582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: GreenTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 1587205583}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 280224936}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1592946023
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,6 +5837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592946024}
+  - component: {fileID: 1592946025}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -5258,6 +5860,23 @@ Transform:
   m_Father: {fileID: 888068845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592946025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592946023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &1594190536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594190537}
+  - component: {fileID: 1594190538}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -5289,6 +5909,23 @@ Transform:
   m_Father: {fileID: 825750849}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594190538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594190536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1595122410
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,6 +5935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1595122411}
+  - component: {fileID: 1595122412}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -5320,6 +5958,23 @@ Transform:
   m_Father: {fileID: 1187809367}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595122412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595122410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1634938994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,6 +5984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634938995}
+  - component: {fileID: 1634938996}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -5351,6 +6007,23 @@ Transform:
   m_Father: {fileID: 1061030296}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634938996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634938994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1001 &1651737278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5876,6 +6549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720460535}
+  - component: {fileID: 1720460536}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -5898,6 +6572,23 @@ Transform:
   m_Father: {fileID: 1189929105}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720460536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720460534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: b5b90e03d7368874ca5ef8ec7f854ac2, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1 &1725420685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,6 +6598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1725420686}
+  - component: {fileID: 1725420687}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -5929,37 +6621,23 @@ Transform:
   m_Father: {fileID: 168321392}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1727915119
-GameObject:
+--- !u!114 &1725420687
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1727915120}
-  m_Layer: 0
-  m_Name: GreenToRedToGreenWaypoint
-  m_TagString: GreenToRedToGreenWaypoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1727915120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727915119}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -425, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1725420685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}
 --- !u!1001 &1738510369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6089,6 +6767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1750916740}
+  - component: {fileID: 1750916741}
   m_Layer: 0
   m_Name: Blue_Mid_Spawn
   m_TagString: BlueSpawnMid
@@ -6111,6 +6790,34 @@ Transform:
   m_Father: {fileID: 1494693684}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1750916741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750916739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708b0f1933c96b34fa60d4a3aaa31550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionPrefab: {fileID: 7156100916981468025, guid: 48d4cb13708e2e5489de065b4289d853, type: 3}
+  minionScriptable:
+  - {fileID: 11400000, guid: 9c158793aa8e61b4ca151bb9dd0d8193, type: 2}
+  - {fileID: 11400000, guid: 980da8296031ba646a67ce9a36ad2994, type: 2}
+  - {fileID: 11400000, guid: 5c3bbeb377e5f944ab6866fc4e2c54bc, type: 2}
+  minionTag: BlueTeam
+  currentMinion: 0
+  spawnPoint: {fileID: 1750916740}
+  spawnInterval: 0.5
+  enemyBase: {fileID: 1398402129}
+  spawnTimer: 40
+  allMinionsInLaneInactive: []
+  warriorsSpawned: 0
+  siegeSpawned: 0
+  magesSpawned: 0
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1768745034
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,7 +6853,7 @@ Transform:
   - {fileID: 1042455432}
   - {fileID: 1676124509}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1769588250
 GameObject:
@@ -6157,6 +6864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769588251}
+  - component: {fileID: 1769588252}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -6179,37 +6887,23 @@ Transform:
   m_Father: {fileID: 1078686145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1775512965
-GameObject:
+--- !u!114 &1769588252
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1775512966}
-  m_Layer: 0
-  m_Name: Mid_waypointRed
-  m_TagString: MidWaypointRed
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1775512966
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775512965}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60, y: 1, z: -77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1769588250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &1836465011
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,6 +6996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1871026874}
+  - component: {fileID: 1871026875}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -6324,6 +7019,23 @@ Transform:
   m_Father: {fileID: 1061030296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1871026875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871026873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1 &1887410123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +7045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887410124}
+  - component: {fileID: 1887410125}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -6355,6 +7068,23 @@ Transform:
   m_Father: {fileID: 825750849}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887410125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887410123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: dde93744a339cc147bee13567de42455, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &1916316037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,6 +7094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916316038}
+  - component: {fileID: 1916316039}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -6386,6 +7117,23 @@ Transform:
   m_Father: {fileID: 888068845}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916316039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916316037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: RedTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 7866fff66b8c4864a886dd51dcb8ac6c, type: 2}
 --- !u!1 &1943498753
 GameObject:
   m_ObjectHideFlags: 0
@@ -6419,7 +7167,7 @@ Transform:
   - {fileID: 1748938014}
   - {fileID: 491633077}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1959615828
 GameObject:
@@ -6469,6 +7217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980795235}
+  - component: {fileID: 1980795236}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -6491,6 +7240,23 @@ Transform:
   m_Father: {fileID: 309890203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980795236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980795234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1001 &2020902152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6582,6 +7348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021912342}
+  - component: {fileID: 2021912343}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -6604,37 +7371,23 @@ Transform:
   m_Father: {fileID: 309890203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2030912912
-GameObject:
+--- !u!114 &2021912343
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2030912913}
-  m_Layer: 0
-  m_Name: YellowToRedToYellowWaypoint
-  m_TagString: YellowToRedToYellowWaypoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2030912913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030912912}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -425}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515694742}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 2021912341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: GreenTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 3e82554fbc6d041479d9c4c40c59d860, type: 2}
 --- !u!1 &2054014271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,6 +7436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2085714409}
+  - component: {fileID: 2085714410}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -6705,6 +7459,23 @@ Transform:
   m_Father: {fileID: 1187809367}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085714410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085714408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 0bb3907cd1621cd499fb470492873395, type: 2}
+  towerTag: BlueTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: 8c8be4b559b101443b355ee24feb9fa3, type: 2}
 --- !u!1001 &2130882460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6796,6 +7567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134055458}
+  - component: {fileID: 2134055459}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -6818,3 +7590,20 @@ Transform:
   m_Father: {fileID: 697808796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134055459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134055457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a21ef97ed1426a4ca5c1d2738f4a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1612394369470145867, guid: dd15b083846402b4e9bfbc8cf0e5da91, type: 3}
+  towerScriptable: {fileID: 11400000, guid: 16e87093c59b1a64f8b6aed2acf3c63b, type: 2}
+  towerTag: YellowTeam
+  spawnPoint: {fileID: 0}
+  teamMat: {fileID: 2100000, guid: b16f0ffae23966a48975ce5a12b8e619, type: 2}

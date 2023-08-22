@@ -20,8 +20,8 @@ public class TowerHealth : MonoBehaviour
         if (health <= 0)
         {
             // Notify all minions that are attacking this target
-            MinionBehaviour[] attackingMinions = FindObjectsOfType<MinionBehaviour>();
-            foreach (MinionBehaviour attackingMinion in attackingMinions)
+            MinionAI[] attackingMinions = FindObjectsOfType<MinionAI>();
+            foreach (MinionAI attackingMinion in attackingMinions)
             {
                 if (attackingMinion.currentTarget == transform)
                 {
@@ -37,9 +37,9 @@ public class TowerHealth : MonoBehaviour
     [Server]
     public void TakeDamage(Transform entity, double damage, int type)
     {
-        if (entity.GetComponent<MinionBehaviour>() != null)
+        if (entity.GetComponent<MinionAI>() != null)
         {
-            MinionBehaviour minionEntity = entity.GetComponent<MinionBehaviour>();
+            MinionAI minionEntity = entity.GetComponent<MinionAI>();
 
             switch (type)
             {
