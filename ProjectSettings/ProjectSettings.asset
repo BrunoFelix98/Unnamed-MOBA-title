@@ -889,11 +889,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: fadac8ab-9db1-4e04-9d5c-f4028d28c46d
+  cloudProjectId: 723ec140-a12d-48f0-b67e-0b3390db0ada
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Testing stuff now
+  organizationId: bcfelix98
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

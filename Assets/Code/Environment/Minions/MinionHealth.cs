@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class MinionHealth : MonoBehaviour
 {
-    public double health;
-    public MinionAI itself;
+    [SerializeField] private double health;
+    [SerializeField] private MinionAI itself;
+    [SerializeField] private Slider healthSlider;
 
     void Start()
     {
         itself = GetComponent<MinionAI>();
+        healthSlider = GetComponentInChildren<Slider>();
     }
 
     void Update()
@@ -54,24 +57,29 @@ public class MinionHealth : MonoBehaviour
                     if ((damage - minionEntity.minionData.minionPhysicalResistance) > 0)
                     {
                         minionEntity.minionData.minionCurrentHitpoints -= (damage - minionEntity.minionData.minionPhysicalResistance);
+                        UpdateHealthBarSlider(minionEntity.minionData.minionCurrentHitpoints, minionEntity.minionData.minionHitpoints);
                     }
                     else
                     {
                         minionEntity.minionData.minionCurrentHitpoints--;
+                        UpdateHealthBarSlider(minionEntity.minionData.minionCurrentHitpoints, minionEntity.minionData.minionHitpoints);
                     }
                     break;
                 case 1: //Magical
                     if ((damage - minionEntity.minionData.minionMagicalResistance) > 0)
                     {
                         minionEntity.minionData.minionCurrentHitpoints -= (damage - minionEntity.minionData.minionMagicalResistance);
+                        UpdateHealthBarSlider(minionEntity.minionData.minionCurrentHitpoints, minionEntity.minionData.minionHitpoints);
                     }
                     else
                     {
                         minionEntity.minionData.minionCurrentHitpoints--;
+                        UpdateHealthBarSlider(minionEntity.minionData.minionCurrentHitpoints, minionEntity.minionData.minionHitpoints);
                     }
                     break;
                 case 2: //True
                     minionEntity.minionData.minionCurrentHitpoints -= damage;
+                    UpdateHealthBarSlider(minionEntity.minionData.minionCurrentHitpoints, minionEntity.minionData.minionHitpoints);
                     break;
                 default:
                     break;
@@ -83,5 +91,10 @@ public class MinionHealth : MonoBehaviour
 
             towerEntity.towerData.Hitpoints -= damage;
         }
+    }
+
+    public void UpdateHealthBarSlider(double current, double max)
+    {
+        healthSlider.value = (float)current / (float)max;
     }
 }
